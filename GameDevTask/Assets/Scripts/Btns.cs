@@ -36,7 +36,13 @@ public class Btns : MonoBehaviour
     public void QuitGame()
     {
         Application.Quit();
+
+    #if UNITY_EDITOR
+    if (Application.isEditor)
+    {
         UnityEditor.EditorApplication.isPlaying = false;
+    }
+    #endif
     }
 }
 

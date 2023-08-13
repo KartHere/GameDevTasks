@@ -5478,6 +5478,14 @@ PrefabInstance:
       propertyPath: GameOver
       value: 
       objectReference: {fileID: 1748662341}
+    - target: {fileID: 1186819147134940229, guid: 9b2cb164cc1542e4181441794f66e81b, type: 3}
+      propertyPath: duration
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1186819147134940229, guid: 9b2cb164cc1542e4181441794f66e81b, type: 3}
+      propertyPath: speedFact
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 1186819147134940230, guid: 9b2cb164cc1542e4181441794f66e81b, type: 3}
       propertyPath: m_SortingOrder
       value: 1
@@ -5604,14 +5612,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: -3306472661135896541, guid: 632e83a233404ac48aa7d37062a8a804, type: 3}
-      propertyPath: ScoreHandler
-      value: 
-      objectReference: {fileID: 519420028}
-    - target: {fileID: -1898547999154281589, guid: 632e83a233404ac48aa7d37062a8a804, type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 6674287072729649291, guid: 632e83a233404ac48aa7d37062a8a804, type: 3}
       propertyPath: m_Name
       value: PlayerTrail
@@ -5659,10 +5659,6 @@ PrefabInstance:
     - target: {fileID: 6674287072729649524, guid: 632e83a233404ac48aa7d37062a8a804, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6674287072729649525, guid: 632e83a233404ac48aa7d37062a8a804, type: 3}
-      propertyPath: step
-      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 6674287072729649525, guid: 632e83a233404ac48aa7d37062a8a804, type: 3}
       propertyPath: Player

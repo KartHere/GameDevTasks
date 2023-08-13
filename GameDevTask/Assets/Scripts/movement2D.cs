@@ -6,12 +6,19 @@ public class movement2D : MonoBehaviour
 {
     private Rigidbody2D rb2D;
     float x_dir, y_dir;
-    public float duration = 1;
+    public float duration = 1.0f;
+    public float minDuration = 0.1f;
+    public float maxDuration = 0.5f;
+    public float speedFact = 1.0f;
     public bool isMoving;
     public GameObject GameOver;
     // Start is called before the first frame update
     void Start()
     {
+        duration = 0.50f;
+        minDuration = 0.1f;
+        maxDuration = 0.5f;
+        speedFact = 0.1f;
         rb2D = GetComponent<Rigidbody2D>();
     }
     void Update()
@@ -59,6 +66,13 @@ public class movement2D : MonoBehaviour
         float timeElapsed = 0;
         isMoving = true;
         Vector3 startPosition = transform.position;
+        float dist = Vector3.Distance(startPosition, targetPosition);
+        duration = dist * speedFact;
+        if (duration < minDuration)
+            duration = minDuration;
+        if (duration > maxDuration)
+            duration = maxDuration;
+        Debug.Log(duration);
         while (timeElapsed < duration)
         {
             transform.position = Vector3.Lerp(startPosition, targetPosition, timeElapsed / duration);
